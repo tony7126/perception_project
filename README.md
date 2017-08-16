@@ -3,6 +3,7 @@
 Attached is my perception pipeline script subscribing to `/pr2/world/points`, output_*.yamls, train_svm.py, features.py, and capture_features.py.  For training the models I changed the model list in capture_features.py and doubled the number of angles being trained per model to 10.  The kernel was also changed to RBF which gave more accuracy on the test set predictions. Next I will be purusing the extra challenges but wanted to get this submission in first for peace of mind!
 
 Pipeline in depth:
+
 1.) I decreased the leaf_size to 0.005 for a more granular point cloud.
 
 2.) Two pass through filters were used.  One is about the same as the exercise's along the Z axis to filter out unused data below and above a certain threshold.  The 2nd I found useful to get rid of some of the clutter beyond the table.
